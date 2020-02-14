@@ -43,6 +43,7 @@ func TestPortForwardingList(t *testing.T) {
 				InternalPortID:    "070ef0b2-0175-4299-be5c-01fea8cca522",
 				ExternalPort:      2229,
 				ID:                "1798dc82-c0ed-4b79-b12d-4c3c18f90eb2",
+				Description:       "desc",
 			},
 			{
 				Protocol:          "tcp",
@@ -140,7 +141,8 @@ func TestGet(t *testing.T) {
     "internal_port": 25,
     "internal_port_id": "1238be08-a2a8-4b8d-addf-fb5e2250e480",
     "external_port": 2230,
-    "id": "725ade3c-9760-4880-8080-8fc2dbab9acc"
+    "id": "725ade3c-9760-4880-8080-8fc2dbab9acc",
+    "description": "text"
   }
 }
       `)
@@ -155,6 +157,7 @@ func TestGet(t *testing.T) {
 	th.AssertEquals(t, 25, pf.InternalPort)
 	th.AssertEquals(t, "1238be08-a2a8-4b8d-addf-fb5e2250e480", pf.InternalPortID)
 	th.AssertEquals(t, 2230, pf.ExternalPort)
+	th.AssertEquals(t, "text", pf.Description)
 }
 
 func TestDelete(t *testing.T) {

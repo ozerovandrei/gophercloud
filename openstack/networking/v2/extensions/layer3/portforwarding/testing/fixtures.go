@@ -8,7 +8,8 @@ const PoFw = `{
       "internal_port": 25,
       "internal_port_id": "070ef0b2-0175-4299-be5c-01fea8cca522",
       "external_port": 2229,
-      "id": "1798dc82-c0ed-4b79-b12d-4c3c18f90eb2"
+      "id": "1798dc82-c0ed-4b79-b12d-4c3c18f90eb2",
+      "description": "desc"
     }`
 
 const PoFw_second = `{
